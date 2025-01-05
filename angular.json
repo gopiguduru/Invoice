@@ -13,6 +13,10 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
+            "allowedCommonJsDependencies": [
+              "canvg",
+              "jspdf"
+            ],
             "outputPath": "dist/invoice",
             "index": "src/index.html",
             "browser": "src/main.ts",
@@ -42,8 +46,8 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kB",
-                  "maximumError": "1MB"
+                  "maximumError": "1.1MB",
+                   "maximumWarning": "1.05MB"
                 },
                 {
                   "type": "anyComponentStyle",
@@ -103,3 +107,5 @@
     "analytics": "9a0e3b9f-e789-46dc-84c1-d40aeb1d9360"
   }
 }
+
+

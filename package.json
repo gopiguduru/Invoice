@@ -22,6 +22,7 @@
     "@angular/router": "^19.0.0",
     "@angular/ssr": "^19.0.6",
     "bootstrap": "^5.3.3",
+    "canvg": "^4.0.2",
     "express": "^4.18.2",
     "html2canvas": "^1.4.1",
     "jspdf": "^2.5.2",
