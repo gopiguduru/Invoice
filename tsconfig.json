@@ -3,9 +3,6 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "baseUrl": "./",
-    "@netlify/angular-runtime/*": ["node_modules/@netlify/angular-runtime/*"],
-    
     "outDir": "./dist/out-tsc",
     "strict": true,
     "noImplicitOverride": true,
