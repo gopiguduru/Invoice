@@ -1,0 +1,43 @@
+<div class=" mt-4">
+    <table class="table table-bordered  table-striped table-responsive styled-table">
+      <thead class="text-white tblhdg" style="background-color: #0d508f; color: white;">
+        <tr >
+          <th style="background-color: #0d508f; color: white;">S.No</th>
+          <th style="background-color: #0d508f; color: white;">Item ID</th>
+          <th  style="background-color: #0d508f; color: white;" >Item Particulars</th>
+          <th  style="background-color: #0d508f; color: white;">HSN/SAC</th>
+          <th style="width: 100px; background-color: #0d508f; color: white;" >Qty.</th>
+          <th  style="background-color: #0d508f; color: white;">Rate</th>
+          <th  style="background-color: #0d508f; color: white;">GST %</th>
+          <th  style="background-color: #0d508f; color: white;">Disc.</th>
+          <th  style="background-color: #0d508f; color: white;">Taxable Value</th>
+        </tr>
+      </thead>
+      <tbody >
+        <tr *ngFor="let item of invoiceItems; let i = index">
+          <td>{{ i + 1 }}</td>
+          <td>{{ item.itemId }}</td>
+          <td>
+            {{ item.itemParticulars }}
+            <div class="text-muted small" *ngIf="item.description">
+              {{ item.description }}
+            </div>
+          </td>
+          <td>{{ item.hsnSac }}</td>
+          <td>{{ item.quantity }}</td>
+          <td>{{ item.rate | number:'1.2-2' }}</td>
+          <td>{{ item.gst }}%</td>
+          <td>{{ item.discount | number:'1.2-2' }}</td>
+          <td>{{ item.taxableValue | number:'1.2-2' }}</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr class="table-info">
+          <td colspan="7" class="text-end fw-bold">Total</td>
+          <td class="fw-bold">{{ getTotalDiscount() | number:'1.2-2' }}</td>
+          <td class="fw-bold">{{ getTotalTaxableValue() | number:'1.2-2' }}</td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+  

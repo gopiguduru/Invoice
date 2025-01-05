@@ -1,0 +1,83 @@
+<div class="d-flex m-2">
+    <!-- Vertical Tax Summary -->
+   
+    <h4 class="vertical-header">TAX SUMMARY</h4>
+    <!-- Left Table -->
+    <div class="col-md-8 ">
+      <table class="table border border-secondary  styled-table">
+        <thead>
+          <tr>
+            <th>HSN/SAC</th>
+            <th>GST%</th>
+            <th>Taxable Value</th>
+            <th>CGST</th>
+            <th>SGST</th>
+            <th>IGST</th>
+            <th>Total Tax Value</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of taxSummary">
+            <td>{{ item.hsn }}</td>
+            <td>{{ item.gst }}%</td>
+            <td>{{ item.taxableValue | number: '1.2-2' }}</td>
+            <td>{{ item.cgst | number: '1.2-2' }}</td>
+            <td>{{ item.sgst | number: '1.2-2' }}</td>
+            <td>{{ item.igst | number: '1.2-2' }}</td>
+            <td>{{ item.totalTaxValue | number: '1.2-2' }}</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr >
+            <td colspan="2" class="fw-bold total" style="background-color: #d9f3ff;">Total</td>
+            <td style="background-color: #d9f3ff;">{{ getTotalTaxableValue() | number: '1.2-2' }}</td>
+            <td style="background-color: #d9f3ff;">{{ getTotalCGST() | number: '1.2-2' }}</td>
+            <td style="background-color: #d9f3ff;">{{ getTotalSGST() | number: '1.2-2' }}</td>
+            <td style="background-color: #d9f3ff;">{{ getTotalIGST() | number: '1.2-2' }}</td>
+            <td style="background-color: #d9f3ff;">{{ getTotalTaxValue() | number: '1.2-2' }}</td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+  
+    <!-- Right Summary -->
+    <div class="col-md-3">
+      <table class="table bg-primary styled-summary">
+        <tbody>
+          <tr>
+            <td class="text-end" style="background-color: #d9f3ff;">Sub Total</td>
+            <td class="text-end" style="background-color: #d9f3ff;">{{ subTotal | number: '1.2-2' }}</td>
+          </tr>
+          <tr>
+            <td  class="text-end" style="background-color: #d9f3ff;">Discount</td>
+            <td class="text-end" style="background-color: #d9f3ff;">{{ discount | number: '1.2-2' }}</td>
+          </tr>
+          <tr>
+            <td  class="text-end" style="background-color: #d9f3ff;">CGST</td>
+            <td class="text-end" style="background-color: #d9f3ff;">{{ totalCGST | number: '1.2-2' }}</td>
+          </tr>
+          <tr>
+            <td  class="text-end" style="background-color: #d9f3ff;">SGST</td>
+            <td class="text-end" style="background-color: #d9f3ff;">{{ totalSGST | number: '1.2-2' }}</td>
+          </tr>
+          <tr>
+            <td  class="text-end" style="background-color: #d9f3ff;">IGST</td>
+            <td class="text-end" style="background-color: #d9f3ff;">{{ totalIGST | number: '1.2-2' }}</td>
+          </tr>
+          <tr>
+            <td  class="text-end" style="background-color: #d9f3ff;">TCS-0.1%</td>
+            <td class="text-end" style="background-color: #d9f3ff;">{{ tcs | number: '1.2-2' }}</td>
+          </tr>
+          <tr>
+            <td  class="text-end" style="background-color: #d9f3ff;">Round off (+/-)</td>
+            <td class="text-end" style="background-color: #d9f3ff;">{{ roundOff | number: '1.2-2' }}</td>
+          </tr>
+          <tr class="bg-primary text-white fw-bold">
+            <td  class="text-end">Invoice Total</td>
+            <td class="text-end">{{ invoiceTotal | number: '1.2-2' }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  

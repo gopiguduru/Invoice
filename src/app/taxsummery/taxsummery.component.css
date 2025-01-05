@@ -1,0 +1,109 @@
+/* Main Layout */
+.vertical-container {
+    background-color: #f8f9fa;
+    height: 100%;
+  }
+  
+  .vertical-header {
+    writing-mode: vertical-rl;
+    text-orientation: downright;
+    transform: rotate(180deg);
+    font-weight: bold;
+    text-align: center;
+    font-size: 20px;
+    color: #0d508f;
+    margin: 0;
+  }
+  
+  /* Table Styling */
+  .styled-table {
+    width: 100%;
+    margin-bottom: 1rem;
+    border-collapse: collapse;
+  }
+  
+  .styled-table thead th {
+    background-color: #0d508f;
+    color: white;
+    text-align: center;
+    padding: 8px;
+  }
+  
+  .styled-table tbody td {
+    text-align: right;
+    padding: 8px;
+  }
+  
+  .styled-table tfoot td {
+    background-color: #e9ecef;
+    font-weight: bold;
+  }
+  
+  .styled-summary {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  
+  .styled-summary tbody td {
+    padding: 8px;
+  }
+  
+  .styled-summary tr.bg-primary {
+    background-color: #0d508f !important;
+    color: white;
+  }
+  
+  .table-bordered {
+    border: 1px solid #ddd;
+  }
+  
+  .table-bordered td,
+  .table-bordered th {
+    border: 1px solid #ddd;
+  }
+  .Total{
+    background-color: #d9f3ff !important;
+  }
+
+
+
+
+
+/* Styled Summary Table */
+.styled-summary {
+    background-color: #0d508f; /* Light blue background for the table */
+    border-collapse: collapse;
+    width: 100%;
+    margin-left: 20px; /* Add left margin */
+    margin-top:0; /* Optional: Add top margin if needed */
+    height: 40px;
+  }
+  
+  .styled-summary td {
+    padding: 8px 12px; /* Padding inside cells */
+    text-align: center; /* Align numbers to the right */
+    font-size: 14px; /* Font size */
+    color: #333; /* Text color */
+    border: none; /* Remove borders between columns */
+  }
+  
+  .styled-summary tr.bg-primary td {
+    background-color: #0d508f !important; /* Blue background for total row */
+    color: white !important; /* White text for total row */
+    font-weight: bold;
+  }
+  
+  .styled-summary tr td:first-child {
+    text-align: left; /* Align first column text to the left */
+    font-weight: bold; /* Highlight label column */
+  }
+  
+  .styled-summary td.text-end {
+    text-align: right; /* Ensure proper alignment for numerical values */
+  }
+  
+  .styled-summary tr:not(.bg-primary) {
+    border-bottom: 1px solid #d1ecf1; /* Subtle line below rows */
+  }
+  
+  

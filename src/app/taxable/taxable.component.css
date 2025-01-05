@@ -1,0 +1,31 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .table th,
+  .table td {
+    text-align: center;
+    vertical-align: middle;
+  }
+  
+  .table-info td {
+    font-weight: bold;
+    background-color: #d9f3ff !important;
+  }
+  
+  .text-muted {
+    color: #6c757d !important;
+  }
+  .tblhdg{
+    background-color: blue;
+  }
+  .styled-table {
+    border-radius: 8px; /* Apply border radius */
+    overflow: hidden; /* Ensure the radius applies properly to the table */
+    border-collapse: separate; /* Prevent the radius from being overridden */
+    border-spacing: 0; /* Optional: Adjust spacing between cells for better visuals */
+    border-collapse: collapse;
+   
+  }
+  
